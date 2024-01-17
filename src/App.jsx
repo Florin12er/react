@@ -1,6 +1,9 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
+import { GuessNumber } from "./guessNumber.jsx";
+import { Form, List, Animals } from "./list.tsx";
+
 function Sebastian({ bgColor }) {
   return (
     <div>
@@ -13,7 +16,8 @@ function Present() {
   return (
     <div>
       <p className="text-3xl font-bold bg-violet-500 mt-5 w-1/2">
-        hello my name is sebastian I am a student in cs and i love coding
+        hello my name is sebastian I am a student in cs i love to code an
+        exercise
       </p>
     </div>
   );
@@ -44,7 +48,7 @@ function AddGoal({ onAddGoal }) {
       <input
         type="text"
         placeholder="Enter new goal"
-        className="w-1/2 h-11 text-3xl font-bold p-1 mt-5 bg-gray-400 placeholder:text-black "
+        className="w-1/2 h-11 text-3xl font-bold p-1  bg-gray-400 placeholder:text-black "
         value={newGoal}
         onChange={handleInputChange}
       />
@@ -92,6 +96,10 @@ function App() {
       </button>
       <Present />
       <FavoriteFood />
+      <GuessNumber />
+      <Form />
+      <List />
+      <Animals />
       <AddGoal onAddGoal={handleAddGoal} />
 
       <div>
